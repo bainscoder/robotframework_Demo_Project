@@ -14,19 +14,20 @@ User navigate to Amazon site
 
 User should search and select product and directed to sign in
     [Documentation]    This is second demo test
-    [Tags]    Smoke
+    [Tags]    Sanity
 
-    open browser    https://www.amazon.com  firefox
-    wait until page contains   Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more
+    open browser    https://www.amazon.in  firefox
+    wait until page contains   Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in
     input text    css = #twotabsearchtextbox    Logitech M510 Wireless
     click button    css = #nav-search-submit-button
-    wait until page contains    Logitech M510 Wireless
-    click link  css = .a-size-mini.a-spacing-none.a-color-base.s-line-clamp-2 .a-link-normal.a-text-normal:nth-child(1)
-    wait until page contains    Back to results
-    element text should be    css= .a-button-inner [title="Add to List"]    Add to List
-    click link    css= #add-to-wishlist-button-group [name="submit.add-to-registry.wishlist.unrecognized"]
-    wait until page contains    Amazon Sign-In
-    sleep    5s
+    wait until page contains    Logitech Pebble M350 Wireless Mouse
+    click image    Sponsored Ad - Logitech Pebble M350 Wireless Mouse with Bluetooth or USB - Silent, Slim Computer Mouse with Quiet Click fo...
+    @{WindowHandles}=   get window handles
+    sleep   5s
+    Switch Window   ${WindowHandles}[1]
+    wait until page contains    Buy Now
+    click button    css= #buy-now-button
+    wait until page contains    Amazon Sign In
     close browser
 
 
