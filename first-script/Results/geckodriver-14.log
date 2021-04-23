@@ -1,0 +1,11 @@
+1619160122949	geckodriver	INFO	Listening on 127.0.0.1:55652
+1619160126031	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\MANPRE~1\\AppData\\Local\\Temp\\rust_mozprofilezR178D"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1619160129945	Marionette	INFO	Listening on port 55661
+1619160130280	Marionette	WARN	TLS certificate errors will be ignored for this session
+1619160136615	Marionette	INFO	Stopped listening on port 55661
+[Child 3876, IPC I/O Child] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:544
+
+###!!! [Child][RunMessage] Error: Channel error: cannot send/recv
+
+[Parent 11508, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167

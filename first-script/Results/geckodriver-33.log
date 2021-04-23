@@ -1,0 +1,12 @@
+1619162900423	geckodriver	INFO	Listening on 127.0.0.1:59906
+1619162903485	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\MANPRE~1\\AppData\\Local\\Temp\\rust_mozprofiletegxrv"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1619162905309	Marionette	INFO	Listening on port 59916
+1619162905534	Marionette	WARN	TLS certificate errors will be ignored for this session
+1619162923590	Marionette	INFO	Stopped listening on port 59916
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x5B0004,name=PHttpChannel::Msg_Cancel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x5B0009,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
