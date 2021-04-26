@@ -1,6 +1,11 @@
 *** Settings ***
 Library    SeleniumLibrary
 
+*** Variables ***
+${BROWSER} =        chrome
+${START_URL} =      https://www.amazon.in
+${SEARCH_ITEM} =    Logitech B170 Wireless Mouse
+
 
 *** Keywords ***
 Insert Testing Data
@@ -19,7 +24,3 @@ Cleanup Testing Data
 
     log    I am clearing the test data
 
-*** Variables ***
-${BROWSER} =        chrome
-${START_URL} =      https://www.amazon.in
-${SEARCH_ITEM} =    Logitech B170 Wireless Mouse

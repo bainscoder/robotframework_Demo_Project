@@ -9,24 +9,24 @@ Resource    ../Resources/PO/TopNav.robot
 
 *** Keywords ***
 
-Search for Products
+User should be able to search for Products
 
     LandingPage.Load Amazon website
     LandingPage.Verify Page Loaded
     TopNav.Search for Product
     SearchResult.Verify Search Completed
 
-Select Product from Search Results
+User should be able to select Product from Search Results
 
     SearchResult.Click Product Link
     Product.Verify Page Loaded
 
-Add Product to Cart
+User should be able to add Product to Cart
 
     Product.Add to Cart
     CartPage.Verify Product Added
 
-Begin Checkout
+User should be able asked to sign-in to Checkout
 
     CartPage.Proceed to Buy
     SignIn.Verify Page Loaded

@@ -2,6 +2,11 @@
 Library    SeleniumLibrary
 Resource    ../Common.robot
 
+*** Variables ***
+${SEARCH_FIELD} =   css = #twotabsearchtextbox
+${SEARCH_BUTTON} =  css = #nav-search-submit-button
+
+
 *** Keywords ***
 Search for Product
     Enter Product name
@@ -10,7 +15,7 @@ Search for Product
 
 Enter Product name
 
-    input text    css = #twotabsearchtextbox    ${SEARCH_ITEM}
+    input text    ${SEARCH_FIELD}    ${SEARCH_ITEM}
 
 Submit Search
-    click button    css = #nav-search-submit-button
+    click button    ${SEARCH_BUTTON}
