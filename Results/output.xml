@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.1 (Python 3.8.5 on darwin)" generated="20210426 00:02:52.034" rpa="false">
+<robot generator="Robot 3.2.1 (Python 3.8.5 on darwin)" generated="20210426 23:44:59.298" rpa="false">
 <suite id="s1" name="Amazon" source="/Users/manpreetsinghbains/Automation work/robotframework/robotProject/Tests/Amazon.robot">
-<test id="s1-t1" name="Test-2: User should search and select product and directed to sign in">
+<test id="s1-t1" name="Test-2: Verify that user should able to search and select product and directed to sign in">
 <kw name="Begin Web Test" library="Common" type="setup">
 <kw name="Open Browser" library="SeleniumLibrary">
 <doc>Opens a new browser instance to the optional ``url``.</doc>
@@ -9,22 +9,22 @@
 <arg>about:blank</arg>
 <arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20210426 00:02:52.210" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20210426 00:02:52.210" endtime="20210426 00:02:55.268"></status>
+<msg timestamp="20210426 23:44:59.527" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210426 23:44:59.526" endtime="20210426 23:45:01.885"></status>
 </kw>
-<status status="PASS" starttime="20210426 00:02:52.210" endtime="20210426 00:02:55.268"></status>
+<status status="PASS" starttime="20210426 23:44:59.526" endtime="20210426 23:45:01.885"></status>
 </kw>
-<kw name="Search for Products" library="AmazonWeb">
+<kw name="User should be able to search for Products" library="AmazonWeb">
 <kw name="Load Amazon website" library="LandingPage">
 <kw name="Go To" library="SeleniumLibrary">
 <doc>Navigates the current browser window to the provided ``url``.</doc>
 <arguments>
 <arg>${START_URL}</arg>
 </arguments>
-<msg timestamp="20210426 00:02:55.270" level="INFO">Opening url 'https://www.amazon.in'</msg>
-<status status="PASS" starttime="20210426 00:02:55.270" endtime="20210426 00:02:56.677"></status>
+<msg timestamp="20210426 23:45:01.887" level="INFO">Opening url 'https://www.amazon.in'</msg>
+<status status="PASS" starttime="20210426 23:45:01.887" endtime="20210426 23:45:03.425"></status>
 </kw>
-<status status="PASS" starttime="20210426 00:02:55.269" endtime="20210426 00:02:56.678"></status>
+<status status="PASS" starttime="20210426 23:45:01.887" endtime="20210426 23:45:03.425"></status>
 </kw>
 <kw name="Verify Page Loaded" library="LandingPage">
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
@@ -32,35 +32,35 @@
 <arguments>
 <arg>Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in</arg>
 </arguments>
-<status status="PASS" starttime="20210426 00:02:56.678" endtime="20210426 00:02:56.693"></status>
+<status status="PASS" starttime="20210426 23:45:03.426" endtime="20210426 23:45:03.443"></status>
 </kw>
-<status status="PASS" starttime="20210426 00:02:56.678" endtime="20210426 00:02:56.693"></status>
+<status status="PASS" starttime="20210426 23:45:03.425" endtime="20210426 23:45:03.443"></status>
 </kw>
 <kw name="Search for Product" library="TopNav">
 <kw name="Enter Product name" library="TopNav">
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
 <arguments>
-<arg>css = #twotabsearchtextbox</arg>
+<arg>${SEARCH_FIELD}</arg>
 <arg>${SEARCH_ITEM}</arg>
 </arguments>
-<msg timestamp="20210426 00:02:56.694" level="INFO">Typing text 'Logitech B170 Wireless Mouse' into text field 'css = #twotabsearchtextbox'.</msg>
-<status status="PASS" starttime="20210426 00:02:56.694" endtime="20210426 00:02:56.890"></status>
+<msg timestamp="20210426 23:45:03.444" level="INFO">Typing text 'Logitech B170 Wireless Mouse' into text field 'css = #twotabsearchtextbox'.</msg>
+<status status="PASS" starttime="20210426 23:45:03.444" endtime="20210426 23:45:03.680"></status>
 </kw>
-<status status="PASS" starttime="20210426 00:02:56.693" endtime="20210426 00:02:56.890"></status>
+<status status="PASS" starttime="20210426 23:45:03.444" endtime="20210426 23:45:03.681"></status>
 </kw>
 <kw name="Submit Search" library="TopNav">
 <kw name="Click Button" library="SeleniumLibrary">
 <doc>Clicks the button identified by ``locator``.</doc>
 <arguments>
-<arg>css = #nav-search-submit-button</arg>
+<arg>${SEARCH_BUTTON}</arg>
 </arguments>
-<msg timestamp="20210426 00:02:56.890" level="INFO">Clicking button 'css = #nav-search-submit-button'.</msg>
-<status status="PASS" starttime="20210426 00:02:56.890" endtime="20210426 00:02:58.512"></status>
+<msg timestamp="20210426 23:45:03.681" level="INFO">Clicking button 'css = #nav-search-submit-button'.</msg>
+<status status="PASS" starttime="20210426 23:45:03.681" endtime="20210426 23:45:05.141"></status>
 </kw>
-<status status="PASS" starttime="20210426 00:02:56.890" endtime="20210426 00:02:58.512"></status>
+<status status="PASS" starttime="20210426 23:45:03.681" endtime="20210426 23:45:05.141"></status>
 </kw>
-<status status="PASS" starttime="20210426 00:02:56.693" endtime="20210426 00:02:58.512"></status>
+<status status="PASS" starttime="20210426 23:45:03.443" endtime="20210426 23:45:05.141"></status>
 </kw>
 <kw name="Verify Search Completed" library="SearchResult">
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
@@ -68,23 +68,23 @@
 <arguments>
 <arg>results for "${SEARCH_ITEM}"</arg>
 </arguments>
-<status status="PASS" starttime="20210426 00:02:58.513" endtime="20210426 00:02:58.528"></status>
+<status status="PASS" starttime="20210426 23:45:05.141" endtime="20210426 23:45:05.158"></status>
 </kw>
-<status status="PASS" starttime="20210426 00:02:58.512" endtime="20210426 00:02:58.528"></status>
+<status status="PASS" starttime="20210426 23:45:05.141" endtime="20210426 23:45:05.158"></status>
 </kw>
-<status status="PASS" starttime="20210426 00:02:55.269" endtime="20210426 00:02:58.528"></status>
+<status status="PASS" starttime="20210426 23:45:01.886" endtime="20210426 23:45:05.158"></status>
 </kw>
-<kw name="Select Product from Search Results" library="AmazonWeb">
+<kw name="User should be able to select Product from Search Results" library="AmazonWeb">
 <kw name="Click Product Link" library="SearchResult">
 <kw name="Click Image" library="SeleniumLibrary">
 <doc>Clicks an image identified by ``locator``.</doc>
 <arguments>
 <arg>Sponsored Ad - Logitech M337 Wireless Mouse, Bluetooth, 1000 DPI Laser Grade Optical Sensor, 10-Month Battery Life, PC/Mac...</arg>
 </arguments>
-<msg timestamp="20210426 00:02:58.530" level="INFO">Clicking image 'Sponsored Ad - Logitech M337 Wireless Mouse, Bluetooth, 1000 DPI Laser Grade Optical Sensor, 10-Month Battery Life, PC/Mac...'.</msg>
-<status status="PASS" starttime="20210426 00:02:58.529" endtime="20210426 00:02:58.629"></status>
+<msg timestamp="20210426 23:45:05.159" level="INFO">Clicking image 'Sponsored Ad - Logitech M337 Wireless Mouse, Bluetooth, 1000 DPI Laser Grade Optical Sensor, 10-Month Battery Life, PC/Mac...'.</msg>
+<status status="PASS" starttime="20210426 23:45:05.159" endtime="20210426 23:45:05.289"></status>
 </kw>
-<status status="PASS" starttime="20210426 00:02:58.529" endtime="20210426 00:02:58.629"></status>
+<status status="PASS" starttime="20210426 23:45:05.158" endtime="20210426 23:45:05.289"></status>
 </kw>
 <kw name="Verify Page Loaded" library="Product">
 <kw name="Get Window Handles" library="SeleniumLibrary">
@@ -92,46 +92,64 @@
 <assign>
 <var>@{WindowHandles}</var>
 </assign>
-<msg timestamp="20210426 00:02:58.632" level="INFO">@{WindowHandles} = [ CDwindow-1620B00D4B109F4468F1B843FA32F349 | CDwindow-594C3ACA1353898DDE2C4416F8012E89 ]</msg>
-<status status="PASS" starttime="20210426 00:02:58.629" endtime="20210426 00:02:58.632"></status>
+<msg timestamp="20210426 23:45:05.293" level="INFO">@{WindowHandles} = [ CDwindow-9ADB2B75787167959064F33F02FA82E4 | CDwindow-69BB3A26FA33956AEE55ADDF3EC27D71 ]</msg>
+<status status="PASS" starttime="20210426 23:45:05.290" endtime="20210426 23:45:05.293"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>5s</arg>
 </arguments>
-<msg timestamp="20210426 00:03:03.633" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20210426 00:02:58.632" endtime="20210426 00:03:03.633"></status>
+<msg timestamp="20210426 23:45:10.294" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210426 23:45:05.293" endtime="20210426 23:45:10.295"></status>
 </kw>
 <kw name="Switch Window" library="SeleniumLibrary">
 <doc>Switches to browser window matching ``locator``.</doc>
 <arguments>
 <arg>${WindowHandles}[1]</arg>
 </arguments>
-<status status="PASS" starttime="20210426 00:03:03.633" endtime="20210426 00:03:03.720"></status>
+<status status="PASS" starttime="20210426 23:45:10.295" endtime="20210426 23:45:10.382"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <doc>Waits until ``text`` appears on the current page.</doc>
 <arguments>
 <arg>Back to results</arg>
 </arguments>
-<status status="PASS" starttime="20210426 00:03:03.720" endtime="20210426 00:03:03.768"></status>
+<status status="PASS" starttime="20210426 23:45:10.383" endtime="20210426 23:45:10.434"></status>
 </kw>
-<status status="PASS" starttime="20210426 00:02:58.629" endtime="20210426 00:03:03.769"></status>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>css= #showing-breadcrumbs_div .a-list-item #breadcrumb-back-link</arg>
+<arg>Back to results</arg>
+</arguments>
+<msg timestamp="20210426 23:45:10.435" level="INFO">Verifying element 'css= #showing-breadcrumbs_div .a-list-item #breadcrumb-back-link' contains exact text 'Back to results'.</msg>
+<status status="PASS" starttime="20210426 23:45:10.434" endtime="20210426 23:45:10.450"></status>
 </kw>
-<status status="PASS" starttime="20210426 00:02:58.528" endtime="20210426 00:03:03.769"></status>
+<status status="PASS" starttime="20210426 23:45:05.290" endtime="20210426 23:45:10.450"></status>
 </kw>
-<kw name="Add Product to Cart" library="AmazonWeb">
+<status status="PASS" starttime="20210426 23:45:05.158" endtime="20210426 23:45:10.451"></status>
+</kw>
+<kw name="User should be able to add Product to Cart" library="AmazonWeb">
 <kw name="Add to Cart" library="Product">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>css= #addToCart_feature_div .a-button-text</arg>
+<arg>Add to Cart</arg>
+</arguments>
+<msg timestamp="20210426 23:45:10.451" level="INFO">Verifying element 'css= #addToCart_feature_div .a-button-text' contains exact text 'Add to Cart'.</msg>
+<status status="PASS" starttime="20210426 23:45:10.451" endtime="20210426 23:45:10.467"></status>
+</kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <doc>Clicks the button identified by ``locator``.</doc>
 <arguments>
-<arg>css= #add-to-cart-button</arg>
+<arg>xpath=//*[@id="add-to-cart-button"]</arg>
 </arguments>
-<msg timestamp="20210426 00:03:03.770" level="INFO">Clicking button 'css= #add-to-cart-button'.</msg>
-<status status="PASS" starttime="20210426 00:03:03.770" endtime="20210426 00:03:03.915"></status>
+<msg timestamp="20210426 23:45:10.468" level="INFO">Clicking button 'xpath=//*[@id="add-to-cart-button"]'.</msg>
+<status status="PASS" starttime="20210426 23:45:10.467" endtime="20210426 23:45:10.648"></status>
 </kw>
-<status status="PASS" starttime="20210426 00:03:03.769" endtime="20210426 00:03:03.916"></status>
+<status status="PASS" starttime="20210426 23:45:10.451" endtime="20210426 23:45:10.648"></status>
 </kw>
 <kw name="Verify Product Added" library="CartPage">
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
@@ -139,23 +157,40 @@
 <arguments>
 <arg>Added to Cart</arg>
 </arguments>
-<status status="PASS" starttime="20210426 00:03:03.916" endtime="20210426 00:03:05.348"></status>
+<status status="PASS" starttime="20210426 23:45:10.649" endtime="20210426 23:45:12.118"></status>
 </kw>
-<status status="PASS" starttime="20210426 00:03:03.916" endtime="20210426 00:03:05.348"></status>
+<status status="PASS" starttime="20210426 23:45:10.649" endtime="20210426 23:45:12.118"></status>
 </kw>
-<status status="PASS" starttime="20210426 00:03:03.769" endtime="20210426 00:03:05.348"></status>
+<status status="PASS" starttime="20210426 23:45:10.451" endtime="20210426 23:45:12.118"></status>
 </kw>
-<kw name="Begin Checkout" library="AmazonWeb">
+<kw name="User should be able asked to sign-in to Checkout" library="AmazonWeb">
 <kw name="Proceed to Buy" library="CartPage">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20210426 23:45:17.119" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210426 23:45:12.119" endtime="20210426 23:45:17.119"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>css= #hlb-ptc-btn-native</arg>
+<arg>Proceed to Buy (1 item)</arg>
+</arguments>
+<msg timestamp="20210426 23:45:17.120" level="INFO">Verifying element 'css= #hlb-ptc-btn-native' contains exact text 'Proceed to Buy (1 item)'.</msg>
+<status status="PASS" starttime="20210426 23:45:17.119" endtime="20210426 23:45:17.138"></status>
+</kw>
 <kw name="Click Link" library="SeleniumLibrary">
 <doc>Clicks a link identified by ``locator``.</doc>
 <arguments>
-<arg>css= #hlb-ptc-btn-native</arg>
+<arg>${PROCEED_TO_BUY_BUTTON}</arg>
 </arguments>
-<msg timestamp="20210426 00:03:05.349" level="INFO">Clicking link 'css= #hlb-ptc-btn-native'.</msg>
-<status status="PASS" starttime="20210426 00:03:05.349" endtime="20210426 00:03:06.244"></status>
+<msg timestamp="20210426 23:45:17.138" level="INFO">Clicking link 'css= .huc-width-fit-content .a-row #hlb-ptc-btn .a-button-inner .a-button-text.a-text-center'.</msg>
+<status status="PASS" starttime="20210426 23:45:17.138" endtime="20210426 23:45:18.228"></status>
 </kw>
-<status status="PASS" starttime="20210426 00:03:05.349" endtime="20210426 00:03:06.244"></status>
+<status status="PASS" starttime="20210426 23:45:12.118" endtime="20210426 23:45:18.229"></status>
 </kw>
 <kw name="Verify Page Loaded" library="SignIn">
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
@@ -163,36 +198,36 @@
 <arguments>
 <arg>Amazon Sign In</arg>
 </arguments>
-<status status="PASS" starttime="20210426 00:03:06.245" endtime="20210426 00:03:06.255"></status>
+<status status="PASS" starttime="20210426 23:45:18.229" endtime="20210426 23:45:18.237"></status>
 </kw>
 <kw name="Element Text Should Be" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
 <arguments>
-<arg>css= .a-section .a-spacing-small:nth-child(1)</arg>
+<arg>${SIGNIN_MAIN_HEADING}</arg>
 <arg>Sign-In</arg>
 </arguments>
-<msg timestamp="20210426 00:03:06.256" level="INFO">Verifying element 'css= .a-section .a-spacing-small:nth-child(1)' contains exact text 'Sign-In'.</msg>
-<status status="PASS" starttime="20210426 00:03:06.255" endtime="20210426 00:03:06.271"></status>
+<msg timestamp="20210426 23:45:18.237" level="INFO">Verifying element 'css= .a-section .a-spacing-small:nth-child(1)' contains exact text 'Sign-In'.</msg>
+<status status="PASS" starttime="20210426 23:45:18.237" endtime="20210426 23:45:18.252"></status>
 </kw>
-<status status="PASS" starttime="20210426 00:03:06.244" endtime="20210426 00:03:06.271"></status>
+<status status="PASS" starttime="20210426 23:45:18.229" endtime="20210426 23:45:18.252"></status>
 </kw>
-<status status="PASS" starttime="20210426 00:03:05.348" endtime="20210426 00:03:06.272"></status>
+<status status="PASS" starttime="20210426 23:45:12.118" endtime="20210426 23:45:18.252"></status>
 </kw>
 <kw name="End Web Test" library="Common" type="teardown">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20210426 00:03:06.272" endtime="20210426 00:03:06.458"></status>
+<status status="PASS" starttime="20210426 23:45:18.253" endtime="20210426 23:45:18.415"></status>
 </kw>
-<status status="PASS" starttime="20210426 00:03:06.272" endtime="20210426 00:03:06.458"></status>
+<status status="PASS" starttime="20210426 23:45:18.252" endtime="20210426 23:45:18.415"></status>
 </kw>
 <doc>This is second demo test</doc>
 <tags>
 <tag>Sanity</tag>
 </tags>
-<status status="PASS" starttime="20210426 00:02:52.209" endtime="20210426 00:03:06.458" critical="yes"></status>
+<status status="PASS" starttime="20210426 23:44:59.525" endtime="20210426 23:45:18.415" critical="yes"></status>
 </test>
 <doc>This is for Demo purpose</doc>
-<status status="PASS" starttime="20210426 00:02:52.035" endtime="20210426 00:03:06.459"></status>
+<status status="PASS" starttime="20210426 23:44:59.300" endtime="20210426 23:45:18.416"></status>
 </suite>
 <statistics>
 <total>
